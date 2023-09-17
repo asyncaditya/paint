@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            gap:5px;
+            background-color: white;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+            border: solid black 5px;
+        }
+
+        div:nth-child(1) {
+            background-color: red;
+        }
+
+        div:nth-child(2) {
+            background-color: green;
+        }
+
+        div:nth-child(3) {
+            background-color: blue;
+        }
+
+        div:nth-child(4) {
+            background-color: yellow;
+        }
+
+        div:hover {
+            opacity: 0.7;
+        }
+
+        #container{
+            opacity: 1;
+            cursor: default;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <script>
+        let boxes = document.getElementsByTagName('div');
+        let container = document.getElementById('container');
+        boxes[1].onclick=()=>{
+            container.style.backgroundColor = "red"
+        }
+        boxes[2].onclick=()=>{
+            container.style.backgroundColor = "green"
+        }
+        boxes[3].onclick=()=>{
+            container.style.backgroundColor = "blue"
+        }
+        boxes[4].onclick=()=>{
+            container.style.backgroundColor = "yellow"
+        }
+    </script>
+</body>
+
+</html>
