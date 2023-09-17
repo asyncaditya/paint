@@ -66,6 +66,7 @@
     </div>
 
     <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
         let boxes = document.getElementsByTagName('div');
         let container = document.getElementById('container');
         boxes[1].onclick=()=>{
